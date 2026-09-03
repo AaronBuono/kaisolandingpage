@@ -1,0 +1,103 @@
+﻿Gap Analysis Lite
+
+Info Gathering Questions
+
+1. What ISO Standards are you looking to obtain?
+   * ISO 9001 Quality Management
+   * ISO 14001 Environmental Management
+   * ISO 45001 Occupational Health & Safety Management
+   * ISO 27001 Information Security Management
+   * Other Standards ___________________[free-form text]
+   * I don’t know
+
+   1. What industry is your business in?
+___________________________________ [free-form text]
+
+
+   2. What are the approximate number of people working in your business
+Employees (full-time, part-time, casual) ____________________[number]
+Sub-contractors                              ____________________[number]
+
+ISO Lite Gap Analysis Questions
+Answer 1 to 5
+1        Not at all 
+2        A little, but it’s mostly informal 
+3        We have some things in place 
+4        Yes, we have a clear and consistent approach 
+5        Yes, and we regularly check and improve it
+
+
+
+
+      3. If you weren’t at work tomorrow, would your team know what to do?
+Would your employees know what who is responsible for what, who can make decisions and who they should ask for help?
+For example: job responsibilities, clear role descriptions, project ownership.
+
+      4. Do you ensure your team follows the same steps when completing critical work in the business, or does each person do it their own way? 
+Do you have standardised processes when quoting, ordering materials, checking completed work and dealing with complaints etc.?
+
+      5. Do you keep records to show that critical work in your business has been completed properly?
+For example: completed checklists, inspection reports, approvals, test results or customer sign-offs.
+
+
+         6. Do you prepare for when things go wrong and plan how you would deal with it?
+For example: project delays, mistakes, injuries, equipment failure, spills or unreliable suppliers.
+
+         7. Are you familiar with all the laws and rules your business must follow? Do you have a way to follow and keep up to date with changes?
+
+For example: workplace safety laws, licences, permits, building rules or requirements in customer contracts.
+
+         8. Do you check and make sure that your workers have the right skills and training for their work?
+Do you regularly make sure your team have valid licenses, appropriate qualifications, safety training etc. before they complete important or risky work?
+
+
+            9. Do you check your suppliers and subcontractors have the adequate experience, appropriate licenses, and can complete their work properly and safely?
+For example, checking their insurance, qualifications, references from their previous work or projects etc.
+
+            10. Have you set business goals and have a plan to achieve those goals? Do you regularly review the progress towards those goals?
+For example: a plan to reduce re-work, errors, finishing more projects on time, preventing injuries or receiving fewer customer complaints etc.
+
+            11. When something goes wrong, do you try find out why to stop it from happening again?
+For example: investigating customer complaints, injuries, near misses, faulty work or missed deadlines.
+
+ISO 9001 Quality questions
+
+               12. Do you make sure you & your customer agree on what ‘a good job’ looks like? 
+Do you agree and record what the customer expects before work begins?
+For example: agreed price, deadlines, drawings, specifications and the finished result.
+
+
+                  13. Are there any formal checks to approve completed work before giving it to the customer?
+Do you make sure the work is correct and meets the customer’s requirements?
+For example: inspections, testing, supervisor approval or final quality checks.
+
+ISO 14001 Environmental questions 
+
+
+                  14. Have you considered the environmental problems your work could cause?
+Have you identified at the ways your work could harm or affect the environment?
+For example: waste, fuel use, electricity use, noise, dust, chemicals, water use or spills etc.
+
+                     15.  If an environmental problem happened tomorrow, would your team know what to do?
+Do you have clear ways to manage your biggest environmental risks?
+For example: storing chemicals safely, using spill kits o
+
+ISO 45001 Health and safety questions
+
+                     16. Do you look for dangers before work begins and decide how to make the job safer?
+Do you check what could hurt someone and decide how to make the work safer?
+For example: risk assessments, site inspections, pre-start checks, SWMS or toolbox talks.
+
+                     17. Do your team, workers and subcontractors know how to report a problem if they saw something unsafe? Do you support an environment to ensure they comfortable doing so?
+Do your workers know how to report hazards, raise safety concerns and suggest safer ways of working?
+
+
+
+
+
+Results
+0–25% — Getting started: Your business still needs to put many basic processes in place. 
+26–50% — Some foundations: You are doing some of the right things, but they may not happen every time. 
+51–75% — Making good progress: Many important processes are in place, but there are still some gaps to fix. 
+76–90% — Nearly ready: Your business has strong processes and may be close to being ready for an ISO audit. 
+91–100% — Well prepared: Your business appears to be in a strong position to work towards ISO certification.

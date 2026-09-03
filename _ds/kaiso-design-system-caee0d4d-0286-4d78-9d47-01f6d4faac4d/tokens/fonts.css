@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+/* SUBSTITUTION NOTICE: no brand font files were supplied with the Kaiso assets.
+   The KAISO wordmark is a chamfered geometric grotesque; Space Grotesk is the
+   nearest Google Fonts match and is used for display/UI headings. Archivo covers
+   body text, IBM Plex Mono covers clause numbers, IDs and data. Replace these
+   @import lines and the --font-* tokens when the real families arrive. */
+:root{--font-display:"Space Grotesk",system-ui,sans-serif;--font-body:"Archivo",system-ui,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace}

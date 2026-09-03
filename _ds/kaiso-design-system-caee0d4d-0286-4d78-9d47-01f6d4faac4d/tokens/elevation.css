@@ -1,0 +1,14 @@
+:root{
+/* Kaiso does not use soft ambient shadows. Depth comes from a hard offset shadow
+   in ink, the same trick the isometric illustrations use. */
+--shadow-none:none;
+--shadow-hard-sm:2px 2px 0 0 var(--ink-900);
+--shadow-hard-md:4px 4px 0 0 var(--ink-900);
+--shadow-hard-lg:6px 6px 0 0 var(--ink-900);
+--shadow-hard-accent:4px 4px 0 0 var(--hivis-400);
+--shadow-soft-sm:0 1px 2px rgba(9,25,25,.08);
+--shadow-soft-md:0 4px 12px rgba(9,25,25,.08);
+--shadow-overlay:0 24px 64px rgba(9,25,25,.22);
+--scrim:rgba(9,25,25,.55);
+--blur-overlay:blur(2px);/* @kind other */
+}

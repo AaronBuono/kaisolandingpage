@@ -1,0 +1,21 @@
+:root{
+/* Ink — sampled from the Kaiso illustration set (#091919) */
+--ink-900:#091919;--ink-800:#122524;--ink-700:#1F3231;--ink-600:#334746;--ink-500:#4A5C5B;--ink-400:#6E807F;--ink-300:#A8B4B3;--ink-200:#D2DAD9;--ink-100:#E9EEED;--ink-50:#F4F7F6;--white:#FFFFFF;
+/* Hi-vis — the signage accent. Industrial safety yellow, used sparingly and never as text on white */
+--hivis-600:#B9AC00;--hivis-500:#D8C800;--hivis-400:#F2E635;--hivis-200:#F8F2A0;--hivis-100:#FCFAD9;
+/* Status — reads as a traffic light, matching the Kaiso traffic-light key graphic */
+--green-700:#0E5B3C;--green-500:#1B8A5A;--green-100:#E2F2EA;
+--amber-700:#8A5A08;--amber-500:#C97A0A;--amber-100:#FBEEDA;
+--red-700:#8E2A1E;--red-500:#C8402F;--red-100:#FAE7E3;
+--teal-700:#134E51;--teal-500:#1F6F73;--teal-100:#E1EFEF;
+
+/* Semantic aliases */
+--text-strong:var(--ink-900);--text-body:var(--ink-700);--text-muted:var(--ink-500);--text-faint:var(--ink-400);--text-inverse:var(--white);--text-link:var(--ink-900);
+--surface-page:var(--white);--surface-sunken:var(--ink-50);--surface-card:var(--white);--surface-raised:var(--white);--surface-inverse:var(--ink-900);--surface-accent:var(--hivis-400);--surface-subtle:var(--ink-100);
+--border-strong:var(--ink-900);--border-default:var(--ink-200);--border-subtle:var(--ink-100);--border-focus:var(--ink-900);
+--status-pass-fg:var(--green-700);--status-pass-bg:var(--green-100);--status-pass-dot:var(--green-500);
+--status-attention-fg:var(--amber-700);--status-attention-bg:var(--amber-100);--status-attention-dot:var(--amber-500);
+--status-gap-fg:var(--red-700);--status-gap-bg:var(--red-100);--status-gap-dot:var(--red-500);
+--status-info-fg:var(--teal-700);--status-info-bg:var(--teal-100);--status-info-dot:var(--teal-500);
+--status-verified-fg:var(--ink-900);--status-verified-bg:var(--hivis-200);
+}

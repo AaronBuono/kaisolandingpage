@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><style>body{margin:0}a{color:#091919}a:hover{color:#091919;background:#F2E635}</style></helmet>
+<div style="font-family:Archivo,system-ui,sans-serif;color:#1F3231;background:#fff">
+
+<header style="position:sticky;top:0;z-index:20;background:#fff;border-bottom:1.5px solid #D2DAD9"><div style="max-width:1240px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;gap:32px">
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Logo" height="26" hint-size="82px,26px"></x-import>
+<span style="font:600 12px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#4A5C5B">ISO 9001 · 14001 · 45001</span>
+<div style="margin-left:auto"><x-import component-from-global-scope="KaisoDesignSystem_caee0d.Button" variant="accent" size="sm" onClick="{{ startCheck }}" hint-size="220px,32px">Check your readiness — 2 minutes</x-import></div>
+</div></header>
+
+<div style="background:#091919"><div style="max-width:1240px;margin:0 auto;padding:10px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px">
+<span style="width:10px;height:10px;background:#F2E635;flex:0 0 auto"></span>
+<span style="font:400 13px/1.4 Archivo,sans-serif;color:#E6EBEA">A Kaiso ISO expert reviews every document the AI drafts before it reaches you.</span>
+<span style="font:400 13px/1.4 Archivo,sans-serif;color:#8C9C9B">Kaiso does not issue certificates — an accredited Certification Body makes the final call.</span>
+</div></div>
+
+<sc-if value="{{ isLanding }}" hint-placeholder-val="{{ true }}">
+<section style="border-bottom:1.5px solid #D2DAD9"><div style="max-width:1240px;margin:0 auto;padding:76px 24px 68px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:24px">
+<span style="font:600 12px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#4A5C5B">For Australian businesses under 100 people</span>
+<h1 style="margin:0;font:700 64px/1.02 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#091919;text-wrap:pretty">Win the tenders that ask for ISO — without losing your evenings to paperwork.</h1>
+<p style="margin:0;font:400 18px/1.5 Archivo,sans-serif;color:#334746;max-width:54ch">Kaiso builds your management system from how you already work: the AI drafts the documents, finds what is missing and preps the audit, and a Kaiso ISO expert checks every change before it lands.</p>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px">
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Button" variant="accent" size="lg" onClick="{{ startCheck }}" hint-size="280px,48px">Check your readiness — 2 minutes</x-import>
+<span style="font:400 14px/1.45 Archivo,sans-serif;color:#4A5C5B">No account, no card. Your score shows on screen.</span>
+</div>
+</div>
+<div style="display:flex;justify-content:center"><img src="assets/illustrations/forklift.svg" width="380" height="380" alt="Kaiso key graphic" style="max-width:100%;height:auto"></div>
+</div></section>
+
+<section style="background:#F4F7F6;border-bottom:1.5px solid #D2DAD9"><div style="max-width:1240px;margin:0 auto;padding:52px 24px;display:grid;grid-template-columns:120px 1fr;gap:32px;align-items:center">
+<img src="assets/illustrations/road-sign.svg" width="120" height="120" alt="" style="justify-self:center">
+<div style="display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font:700 24px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.015em;color:#091919">What ISO certification actually is</h2>
+<p style="margin:0;font:400 17px/1.55 Archivo,sans-serif;color:#334746;max-width:68ch">An ISO standard is an agreed way of running part of your business — quality of work (ISO 9001), environmental impact (ISO 14001) or worker safety (ISO 45001). Certification means an independent auditor from an accredited Certification Body has checked that you do what you say you do, and issues a certificate that lasts three years with annual check-ins. Head contractors, government departments and large customers increasingly make it a condition of tendering, so without it you are filtered out before anyone reads your price.</p>
+</div>
+</div></section>
+
+<section style="border-bottom:1.5px solid #D2DAD9"><div style="max-width:1240px;margin:0 auto;padding:64px 24px">
+<h2 style="margin:0 0 32px;font:700 28px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.015em;color:#091919;max-width:26ch">Four steps, and the last one never stops.</h2>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+<div style="background:#fff;border:1.5px solid #D2DAD9;padding:20px;display:flex;flex-direction:column;gap:12px;clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)"><img src="assets/illustrations/magnifying-glass.svg" width="84" height="84" alt=""><span style="font:600 16px/1.15 'Space Grotesk',sans-serif;color:#091919">1. Tell Kaiso how you work</span><span style="font:400 14px/1.45 Archivo,sans-serif;color:#334746">Plain-English questions about your sites, staff and jobs. No clause numbers required.</span></div>
+<div style="background:#fff;border:1.5px solid #D2DAD9;padding:20px;display:flex;flex-direction:column;gap:12px;clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)"><img src="assets/illustrations/iso-documents.svg" width="84" height="84" alt=""><span style="font:600 16px/1.15 'Space Grotesk',sans-serif;color:#091919">2. The AI drafts your system</span><span style="font:400 14px/1.45 Archivo,sans-serif;color:#334746">Procedures, registers and forms written from your answers, not a generic template.</span></div>
+<div style="background:#fff;border:1.5px solid #D2DAD9;padding:20px;display:flex;flex-direction:column;gap:12px;clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)"><img src="assets/illustrations/check-mark.svg" width="84" height="84" alt=""><span style="font:600 16px/1.15 'Space Grotesk',sans-serif;color:#091919">3. A Kaiso ISO expert verifies it</span><span style="font:400 14px/1.45 Archivo,sans-serif;color:#334746">You get the reviewer's name and the date of approval against every document.</span></div>
+<div style="background:#fff;border:1.5px solid #D2DAD9;padding:20px;display:flex;flex-direction:column;gap:12px;clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)"><img src="assets/illustrations/clock.svg" width="84" height="84" alt=""><span style="font:600 16px/1.15 'Space Grotesk',sans-serif;color:#091919">4. Stay ready year-round</span><span style="font:400 14px/1.45 Archivo,sans-serif;color:#334746">Reminders, evidence collection and an activity log, so the annual audit is a Tuesday.</span></div>
+</div>
+</div></section>
+
+<section style="background:#091919;border-bottom:1.5px solid #091919"><div style="max-width:1240px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:20px">
+<span style="font:600 12px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#F2E635">Who checks the work</span>
+<h2 style="margin:0;font:700 34px/1.1 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#fff;max-width:20ch">Nothing reaches you unread by an ISO expert.</h2>
+<p style="margin:0;font:400 16px/1.55 Archivo,sans-serif;color:#C4CFCE;max-width:56ch">Every document, gap and audit action the AI produces is reviewed by a Kaiso ISO expert before it enters your system, and the review is recorded with a name and a date. Kaiso covers ISO 9001, ISO 14001 and ISO 45001. Kaiso is not a Certification Body and cannot issue or guarantee a certificate — an accredited Certification Body audits you and makes the final call.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<span style="font:600 12px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8C9C9B">Businesses using Kaiso</span>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+<div style="height:64px;border:1.5px dashed #4A5C5B;display:flex;align-items:center;justify-content:center;font:400 11px/1.2 'IBM Plex Mono',monospace;color:#8C9C9B">client logo</div>
+<div style="height:64px;border:1.5px dashed #4A5C5B;display:flex;align-items:center;justify-content:center;font:400 11px/1.2 'IBM Plex Mono',monospace;color:#8C9C9B">client logo</div>
+<div style="height:64px;border:1.5px dashed #4A5C5B;display:flex;align-items:center;justify-content:center;font:400 11px/1.2 'IBM Plex Mono',monospace;color:#8C9C9B">client logo</div>
+<div style="height:64px;border:1.5px dashed #4A5C5B;display:flex;align-items:center;justify-content:center;font:400 11px/1.2 'IBM Plex Mono',monospace;color:#8C9C9B">client logo</div>
+</div>
+<div style="border:1.5px solid #4A5C5B;padding:18px;display:flex;flex-direction:column;gap:8px;clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)">
+<span style="font:600 12px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#F2E635">Audit-ready, guaranteed</span>
+<span style="font:400 14px/1.5 Archivo,sans-serif;color:#C4CFCE">Your Kaiso expert signs off your gap analysis before your audit. Certification Body audit fees are paid separately, direct to the auditor.</span>
+</div>
+</div>
+</div></section>
+
+<sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
+<section style="border-bottom:1.5px solid #D2DAD9"><div style="max-width:1240px;margin:0 auto;padding:64px 24px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px">
+<h2 style="margin:0;font:700 34px/1.1 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#091919">Two ways to do it</h2>
+<span style="font:400 14px/1.5 Archivo,sans-serif;color:#4A5C5B">All prices in AUD, excluding GST. Certification Body audit fees are paid separately.</span>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start">
+
+<div style="background:#fff;border:1.5px solid #D2DAD9;padding:28px;display:flex;flex-direction:column;gap:18px;clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)">
+<span style="font:700 22px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.015em;color:#091919">DIY</span>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font:700 36px/1.05 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:#091919">AUD $2,999 to get audit-ready</span>
+<span style="font:400 15px/1.5 Archivo,sans-serif;color:#334746">then AUD $299/month to stay audit-ready — no lock-in</span>
+</div>
+<p style="margin:0;font:500 17px/1.4 Archivo,sans-serif;color:#091919">You do the legwork. We make sure it's right.</p>
+<div style="height:1.5px;background:#D2DAD9"></div>
+<ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.5 Archivo,sans-serif;color:#334746">
+<li>Kobi drafts your entire management system from how you already work</li>
+<li>Your Kaiso expert reviews your gap analysis and signs off before your audit</li>
+<li>You gather the evidence, complete the actions we assign and deal with your certification body</li>
+<li>Audit-ready, guaranteed</li>
+<li>Covers one standard</li>
+</ul>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="KaisoDesignSystem_caee0d.Button" variant="secondary" size="lg" full="{{ true }}" onClick="{{ startCheck }}" hint-size="100%,48px">Check your readiness first</x-import></div>
+</div>
+
+<div style="background:#fff;border:1.5px solid #091919;padding:28px;display:flex;flex-direction:column;gap:18px;box-shadow:6px 6px 0 #091919;clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px">
+<span style="font:700 22px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.015em;color:#091919">Managed</span>
+<span style="background:#F2E635;border:1.5px solid #091919;padding:3px 9px;font:600 11px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#091919">Most chosen</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font:700 36px/1.05 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:#091919">AUD $4,999 to get audit-ready</span>
+<span style="font:400 15px/1.5 Archivo,sans-serif;color:#334746">then AUD $499/month to stay audit-ready — no lock-in</span>
+</div>
+<p style="margin:0;font:500 17px/1.4 Archivo,sans-serif;color:#091919">We run the whole thing.</p>
+<div style="height:1.5px;background:#D2DAD9"></div>
+<ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.5 Archivo,sans-serif;color:#334746">
+<li>Everything in DIY</li>
+<li>Your Kaiso expert runs the engagement end to end</li>
+<li>We chase, assemble and file your evidence</li>
+<li>We deal with your certification body and sit with you at audit</li>
+<li>Audit-ready, guaranteed</li>
+<li>Covers one standard</li>
+</ul>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="KaisoDesignSystem_caee0d.Button" variant="accent" size="lg" full="{{ true }}" onClick="{{ startCheck }}" hint-size="100%,48px">Check your readiness first</x-import></div>
+</div>
+
+</div>
+</div></section>
+</sc-if>
+
+<section style="background:#F2E635;border-bottom:1.5px solid #091919"><div style="max-width:1240px;margin:0 auto;padding:52px 24px;display:flex;flex-wrap:wrap;gap:32px;align-items:center">
+<img src="assets/kobi/kobi-questions.svg" width="84" height="84" alt="Kobi">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="margin:0;font:700 28px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.015em;color:#091919">Find out how ready you actually are.</h2><p style="margin:0;font:400 16px/1.5 Archivo,sans-serif;color:#122524;max-width:56ch">Up to 15 questions about how the business runs. You get your readiness score on screen, straight away.</p></div>
+<div style="margin-left:auto"><x-import component-from-global-scope="KaisoDesignSystem_caee0d.Button" size="lg" onClick="{{ startCheck }}" hint-size="280px,48px">Check your readiness — 2 minutes</x-import></div>
+</div></section>
+</sc-if>
+
+<sc-if value="{{ isAssessment }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F4F7F6;min-height:calc(100vh - 118px);border-bottom:1.5px solid #D2DAD9"><div style="max-width:860px;margin:0 auto;padding:40px 24px 72px;display:flex;flex-direction:column;gap:24px">
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px">
+<span style="font:600 12px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#4A5C5B">Gap analysis lite</span>
+<span style="font:400 12px/1.2 'IBM Plex Mono',monospace;color:#4A5C5B">{{ stepEyebrow }}</span>
+</div>
+
+<div style="display:flex;gap:3px">
+<sc-for list="{{ segs }}" as="seg" hint-placeholder-count="12">
+<span style="flex:1;height:10px;display:block">
+<sc-if value="{{ seg.on }}" hint-placeholder-val="{{ false }}"><span style="display:block;height:10px;background:#F2E635;border:1px solid #091919"></span></sc-if>
+<sc-if value="{{ seg.off }}" hint-placeholder-val="{{ true }}"><span style="display:block;height:10px;background:#E7ECEB;border:1px solid #D2DAD9"></span></sc-if>
+</span>
+</sc-for>
+</div>
+
+<div style="display:flex;gap:16px;align-items:flex-start;margin-top:8px">
+<img src="assets/kobi/kobi-default.svg" width="56" height="56" alt="Kobi" style="flex:0 0 auto">
+<div style="background:#fff;border:1.5px solid #091919;padding:22px 24px;display:flex;flex-direction:column;gap:10px;clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)">
+<h2 style="margin:0;font:600 24px/1.25 'Space Grotesk',sans-serif;letter-spacing:-.015em;color:#091919;text-wrap:pretty">{{ qTitle }}</h2>
+<p style="margin:0;font:400 15px/1.5 Archivo,sans-serif;color:#4A5C5B;max-width:62ch">{{ qHint }}</p>
+</div>
+</div>
+
+<sc-if value="{{ isQuestion }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ opts }}" as="o" hint-placeholder-count="5">
+<sc-if value="{{ o.off }}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:#fff;border:1.5px solid #D2DAD9;padding:14px 16px;cursor:pointer;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)" style-hover="background:#EDF2F1;border-color:#091919">
+<span style="flex:0 0 auto;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1.5px solid #091919;font:600 15px/1 'Space Grotesk',sans-serif;color:#091919">{{ o.num }}</span>
+<span style="font:400 16px/1.4 Archivo,sans-serif;color:#1F3231">{{ o.label }}</span>
+</button>
+</sc-if>
+<sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:#F2E635;border:1.5px solid #091919;padding:14px 16px;cursor:pointer;box-shadow:3px 3px 0 #091919;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)">
+<span style="flex:0 0 auto;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1.5px solid #091919;background:#091919;font:600 15px/1 'Space Grotesk',sans-serif;color:#F2E635">{{ o.num }}</span>
+<span style="font:500 16px/1.4 Archivo,sans-serif;color:#091919">{{ o.label }}</span>
+</button>
+</sc-if>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isStandards }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ opts }}" as="o" hint-placeholder-count="6">
+<sc-if value="{{ o.off }}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:#fff;border:1.5px solid #D2DAD9;padding:14px 16px;cursor:pointer;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)" style-hover="background:#EDF2F1;border-color:#091919">
+<span style="flex:0 0 auto;width:22px;height:22px;border:1.5px solid #091919;background:#fff"></span>
+<span style="font:400 16px/1.4 Archivo,sans-serif;color:#1F3231">{{ o.label }}</span>
+</button>
+</sc-if>
+<sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:#F2E635;border:1.5px solid #091919;padding:14px 16px;cursor:pointer;box-shadow:3px 3px 0 #091919;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)">
+<span style="flex:0 0 auto;width:22px;height:22px;border:1.5px solid #091919;background:#091919;display:flex;align-items:center;justify-content:center;color:#F2E635;font:600 13px/1 'Space Grotesk',sans-serif">✓</span>
+<span style="font:500 16px/1.4 Archivo,sans-serif;color:#091919">{{ o.label }}</span>
+</button>
+</sc-if>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isIndustry }}" hint-placeholder-val="{{ false }}">
+<div style="max-width:480px">
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Input" label="Industry" placeholder="e.g. structural steel fabrication" value="{{ industry }}" onChange="{{ setIndustry }}" hint-size="100%,66px"></x-import>
+</div>
+</sc-if>
+
+<sc-if value="{{ isHeadcount }}" hint-placeholder-val="{{ false }}">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:520px">
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Input" label="Employees (full-time, part-time, casual)" type="text" inputMode="numeric" placeholder="0" value="{{ employees }}" onChange="{{ setEmployees }}" hint-size="100%,66px"></x-import>
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Input" label="Sub-contractors" type="text" inputMode="numeric" placeholder="0" value="{{ subbies }}" onChange="{{ setSubbies }}" hint-size="100%,66px"></x-import>
+</div>
+</sc-if>
+
+<div style="display:flex;gap:12px;align-items:center;margin-top:8px">
+<sc-if value="{{ showBack }}" hint-placeholder-val="{{ false }}">
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Button" variant="secondary" onClick="{{ back }}" hint-size="90px,40px">Back</x-import>
+</sc-if>
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Button" variant="accent" disabled="{{ nextDisabled }}" onClick="{{ next }}" hint-size="120px,40px">Continue</x-import>
+<button type="button" onClick="{{ backToLanding }}" style="margin-left:auto;background:none;border:none;cursor:pointer;font:400 14px/1.4 Archivo,sans-serif;color:#4A5C5B;text-decoration:underline">Leave the check</button>
+</div>
+
+<p style="margin:0;font:400 13px/1.5 Archivo,sans-serif;color:#4A5C5B;max-width:64ch">Your answers stay on this page until you choose to send them. Kaiso does not issue certificates — an accredited Certification Body makes the final call.</p>
+
+</div></section>
+</sc-if>
+
+<sc-if value="{{ isResults }}" hint-placeholder-val="{{ false }}">
+<section style="border-bottom:1.5px solid #D2DAD9"><div style="max-width:960px;margin:0 auto;padding:48px 24px 24px;display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:18px">
+<span style="font:600 12px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#4A5C5B">Your readiness — {{ bandRange }}</span>
+<div style="display:flex;align-items:baseline;gap:18px">
+<span style="font:700 96px/.9 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#091919">{{ score }}%</span>
+<span style="font:700 30px/1.1 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#091919">{{ bandName }}</span>
+</div>
+<p style="margin:0;font:400 18px/1.5 Archivo,sans-serif;color:#334746;max-width:60ch">{{ bandText }}</p>
+<p style="margin:0;font:400 15px/1.55 Archivo,sans-serif;color:#4A5C5B;max-width:64ch">This is a self-assessment, not an audit. It shows where your evidence is thin so you know what to work on first — every business on Kaiso starts somewhere on this scale.</p>
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.ReadinessMeter" value="{{ score }}" size="lg" label="Overall readiness" caption="Based on your answers to the questions you were shown." hint-size="100%,70px"></x-import>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;align-items:center">
+<img src="assets/illustrations/traffic-light.svg" width="180" height="180" alt="">
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.ExpertNote" state="verified" expert="Kaiso ISO experts" hint-size="100%,90px">Every document Kaiso drafts for you is reviewed by an ISO expert before it lands. An accredited Certification Body still makes the final call on certification.</x-import>
+</div>
+</div></section>
+
+<sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+<section style="background:#F4F7F6;border-bottom:1.5px solid #D2DAD9"><div style="max-width:960px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font:700 30px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#091919;max-width:20ch">Get your full gap analysis</h2>
+<p style="margin:0;font:400 16px/1.55 Archivo,sans-serif;color:#334746;max-width:52ch">The score is yours to keep. The full analysis breaks your answers down area by area, names the specific gaps an auditor would raise, and sets out the order to close them in. A Kaiso ISO expert goes through it with you.</p>
+<ul style="margin:4px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font:400 15px/1.5 Archivo,sans-serif;color:#334746">
+<li>Your score split by area, with the weakest item in each</li>
+<li>The documents you are missing for the standards you chose</li>
+<li>A realistic timeline to a Stage 2 audit for a business your size</li>
+</ul>
+</div>
+<div style="background:#fff;border:1.5px solid #091919;padding:24px;display:flex;flex-direction:column;gap:16px;box-shadow:4px 4px 0 #091919;clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)">
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Input" label="Name" placeholder="Your name" value="{{ leadName }}" onChange="{{ setName }}" hint-size="100%,66px"></x-import>
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Input" label="Email" type="email" placeholder="you@business.com.au" value="{{ leadEmail }}" onChange="{{ setEmail }}" hint-size="100%,66px"></x-import>
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Input" label="Phone (optional)" placeholder="04__ ___ ___" value="{{ leadPhone }}" onChange="{{ setPhone }}" hint-size="100%,66px"></x-import>
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Input" label="Current certification status" placeholder="e.g. not certified yet, or certified to ISO 9001" value="{{ leadStatus }}" onChange="{{ setStatus }}" hint-size="100%,66px"></x-import>
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Button" variant="accent" size="lg" full="{{ true }}" disabled="{{ submitDisabled }}" onClick="{{ submitLead }}" hint-size="100%,48px">Get your full gap analysis</x-import>
+<p style="margin:0;font:400 12px/1.5 Archivo,sans-serif;color:#4A5C5B">Kaiso uses these details to send your gap analysis and to have an ISO expert follow up about your certification. Your details are not sold or passed to third parties, and are handled in line with the Australian Privacy Principles. You can ask for them to be deleted at any time.</p>
+</div>
+</div></section>
+</sc-if>
+
+<sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F4F7F6;border-bottom:1.5px solid #D2DAD9"><div style="max-width:960px;margin:0 auto;padding:48px 24px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;gap:16px;align-items:center">
+<img src="assets/kobi/kobi-happy.svg" width="56" height="56" alt="Kobi">
+<div style="display:flex;flex-direction:column;gap:4px">
+<h2 style="margin:0;font:700 28px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#091919">Sent. Here is the short version.</h2>
+<p style="margin:0;font:400 15px/1.5 Archivo,sans-serif;color:#334746">The full gap analysis is on its way to your inbox, and a Kaiso ISO expert will call within one business day to walk you through it.</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+<sc-for list="{{ breakdown }}" as="g" hint-placeholder-count="2">
+<div style="background:#fff;border:1.5px solid #D2DAD9;padding:20px;display:flex;flex-direction:column;gap:14px;clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)">
+<span style="font:600 16px/1.2 'Space Grotesk',sans-serif;color:#091919">{{ g.label }}</span>
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.ReadinessMeter" value="{{ g.pct }}" size="sm" label="Area score" hint-size="100%,50px"></x-import>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font:600 11px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#4A5C5B">Start here</span>
+<span style="font:400 14px/1.45 Archivo,sans-serif;color:#334746">{{ g.weakest }}</span>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;gap:12px;align-items:center">
+<x-import component-from-global-scope="KaisoDesignSystem_caee0d.Button" variant="secondary" onClick="{{ restart }}" hint-size="150px,40px">Back to the site</x-import>
+<span style="font:400 13px/1.5 Archivo,sans-serif;color:#4A5C5B">Kaiso does not issue certificates — an accredited Certification Body makes the final call.</span>
+</div>
+</div></section>
+</sc-if>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;autoAdvance&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Assessment&quot;},&quot;showPricing&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Landing page&quot;}}">
+const SCALE = [
+  { v: 1, label: 'Not at all' },
+  { v: 2, label: "A little, but it's mostly informal" },
+  { v: 3, label: 'We have some things in place' },
+  { v: 4, label: 'Yes, we have a clear and consistent approach' },
+  { v: 5, label: 'Yes, and we regularly check and improve it' }
+];
+
+const STANDARDS = [
+  { id: '9001', label: 'ISO 9001 — Quality Management' },
+  { id: '14001', label: 'ISO 14001 — Environmental Management' },
+  { id: '45001', label: 'ISO 45001 — Occupational Health & Safety Management' },
+  { id: '27001', label: 'ISO 27001 — Information Security Management' },
+  { id: 'other', label: 'Another standard' },
+  { id: 'unsure', label: "I don't know yet" }
+];
+
+const CORE = [
+  { q: "If you weren't at work tomorrow, would your team know what to do?", hint: 'Would your employees know what who is responsible for what, who can make decisions and who they should ask for help? For example: job responsibilities, clear role descriptions, project ownership.' },
+  { q: 'Do you ensure your team follows the same steps when completing critical work in the business, or does each person do it their own way?', hint: 'Do you have standardised processes when quoting, ordering materials, checking completed work and dealing with complaints etc.?' },
+  { q: 'Do you keep records to show that critical work in your business has been completed properly?', hint: 'For example: completed checklists, inspection reports, approvals, test results or customer sign-offs.' },
+  { q: 'Do you prepare for when things go wrong and plan how you would deal with it?', hint: 'For example: project delays, mistakes, injuries, equipment failure, spills or unreliable suppliers.' },
+  { q: 'Are you familiar with all the laws and rules your business must follow? Do you have a way to follow and keep up to date with changes?', hint: 'For example: workplace safety laws, licences, permits, building rules or requirements in customer contracts.' },
+  { q: 'Do you check and make sure that your workers have the right skills and training for their work?', hint: 'Do you regularly make sure your team have valid licenses, appropriate qualifications, safety training etc. before they complete important or risky work?' },
+  { q: 'Do you check your suppliers and subcontractors have the adequate experience, appropriate licenses, and can complete their work properly and safely?', hint: 'For example, checking their insurance, qualifications, references from their previous work or projects etc.' },
+  { q: 'Have you set business goals and have a plan to achieve those goals? Do you regularly review the progress towards those goals?', hint: 'For example: a plan to reduce re-work, errors, finishing more projects on time, preventing injuries or receiving fewer customer complaints etc.' },
+  { q: 'When something goes wrong, do you try find out why to stop it from happening again?', hint: 'For example: investigating customer complaints, injuries, near misses, faulty work or missed deadlines.' }
+];
+
+const BY_STD = {
+  '9001': [
+    { q: "Do you make sure you & your customer agree on what 'a good job' looks like?", hint: 'Do you agree and record what the customer expects before work begins? For example: agreed price, deadlines, drawings, specifications and the finished result.' },
+    { q: 'Are there any formal checks to approve completed work before giving it to the customer?', hint: "Do you make sure the work is correct and meets the customer's requirements? For example: inspections, testing, supervisor approval or final quality checks." }
+  ],
+  '14001': [
+    { q: 'Have you considered the environmental problems your work could cause?', hint: 'Have you identified at the ways your work could harm or affect the environment? For example: waste, fuel use, electricity use, noise, dust, chemicals, water use or spills etc.' },
+    { q: 'If an environmental problem happened tomorrow, would your team know what to do?', hint: 'Do you have clear ways to manage your biggest environmental risks? For example: storing chemicals safely, using spill kits.' }
+  ],
+  '45001': [
+    { q: 'Do you look for dangers before work begins and decide how to make the job safer?', hint: 'Do you check what could hurt someone and decide how to make the work safer? For example: risk assessments, site inspections, pre-start checks, SWMS or toolbox talks. A SWMS is a safe work method statement — a written plan for a high-risk task.' },
+    { q: 'Do your team, workers and subcontractors know how to report a problem if they saw something unsafe? Do you support an environment to ensure they comfortable doing so?', hint: 'Do your workers know how to report hazards, raise safety concerns and suggest safer ways of working?' }
+  ]
+};
+
+const GROUP_LABEL = { core: 'How the business runs', '9001': 'ISO 9001 — Quality', '14001': 'ISO 14001 — Environment', '45001': 'ISO 45001 — Health and safety' };
+
+const BANDS = [
+  { min: 0, max: 25, name: 'Getting started', text: 'Your business still needs to put many basic processes in place.' },
+  { min: 26, max: 50, name: 'Some foundations', text: 'You are doing some of the right things, but they may not happen every time.' },
+  { min: 51, max: 75, name: 'Making good progress', text: 'Many important processes are in place, but there are still some gaps to fix.' },
+  { min: 76, max: 90, name: 'Nearly ready', text: 'Your business has strong processes and may be close to being ready for an ISO audit.' },
+  { min: 91, max: 100, name: 'Well prepared', text: 'Your business appears to be in a strong position to work towards ISO certification.' }
+];
+
+class Component extends DCLogic {
+  state = {
+    view: 'landing', step: 0, standards: [], otherStd: '', industry: '',
+    employees: '', subbies: '', answers: {}, lead: { name: '', email: '', phone: '', status: '' }, submitted: false
+  };
+
+  questions() {
+    const out = CORE.map((x, i) => ({ ...x, key: 'core-' + i, group: 'core' }));
+    ['9001', '14001', '45001'].forEach(s => {
+      if (this.state.standards.indexOf(s) > -1) BY_STD[s].forEach((x, i) => out.push({ ...x, key: s + '-' + i, group: s }));
+    });
+    return out;
+  }
+
+  score() {
+    const qs = this.questions(), a = this.state.answers;
+    const vals = qs.map(q => a[q.key] || 0);
+    const sum = vals.reduce((t, v) => t + v, 0);
+    return qs.length ? Math.round((sum / (qs.length * 5)) * 100) : 0;
+  }
+
+  band() { const s = this.score(); return BANDS.find(b => s >= b.min && s <= b.max) || BANDS[0]; }
+
+  go(n) { this.setState({ step: n }); window.scrollTo(0, 0); }
+
+  renderVals() {
+    const st = this.state, qs = this.questions(), total = 3 + qs.length, step = st.step;
+    const isQ = step >= 3;
+    const q = isQ ? qs[step - 3] : null;
+    const answered = q ? st.answers[q.key] : 0;
+
+    const opts = (() => {
+      if (step === 0) return STANDARDS.map(s => {
+        const on = st.standards.indexOf(s.id) > -1;
+        return { label: s.label, on, off: !on, pick: () => this.setState(p => ({ standards: on ? p.standards.filter(x => x !== s.id) : p.standards.concat(s.id) })) };
+      });
+      if (isQ) return SCALE.map(s => {
+        const on = answered === s.v;
+        return {
+          label: s.label, num: String(s.v), on, off: !on,
+          pick: () => {
+            this.setState(p => ({ answers: { ...p.answers, [q.key]: s.v } }));
+            if (this.props.autoAdvance !== true) return;
+            if (step + 1 < total) setTimeout(() => this.go(step + 1), 180);
+            else setTimeout(() => { this.setState({ view: 'results' }); window.scrollTo(0, 0); }, 200);
+          }
+        };
+      });
+      return [];
+    })();
+
+    const canNext = step === 0 ? st.standards.length > 0
+      : step === 1 ? st.industry.trim().length > 0
+      : step === 2 ? String(st.employees).trim().length > 0
+      : !!answered;
+
+    const segs = Array.from({ length: total }).map((_, i) => ({ on: i <= step, off: i > step }));
+
+    const breakdown = (() => {
+      const groups = ['core'].concat(['9001', '14001', '45001'].filter(s => st.standards.indexOf(s) > -1));
+      return groups.map(g => {
+        const gq = qs.filter(x => x.group === g);
+        const sum = gq.reduce((t, x) => t + (st.answers[x.key] || 0), 0);
+        const pct = Math.round((sum / (gq.length * 5)) * 100);
+        const weakest = gq.slice().sort((a, b) => (st.answers[a.key] || 0) - (st.answers[b.key] || 0))[0];
+        return { key: g, label: GROUP_LABEL[g], pct, weakest: weakest ? weakest.q : '' };
+      });
+    })();
+
+    const sc = this.score();
+
+    return {
+      showPricing: this.props.showPricing !== false,
+      isLanding: st.view === 'landing', isAssessment: st.view === 'assessment', isResults: st.view === 'results',
+      startCheck: () => { this.setState({ view: 'assessment', step: 0 }); window.scrollTo(0, 0); },
+      backToLanding: () => { this.setState({ view: 'landing' }); window.scrollTo(0, 0); },
+      isStandards: step === 0, isIndustry: step === 1, isHeadcount: step === 2, isQuestion: isQ,
+      stepEyebrow: isQ ? 'Question ' + (step - 2) + ' of ' + qs.length : 'About your business — ' + (step + 1) + ' of 3',
+      qTitle: isQ ? q.q : step === 0 ? 'Which ISO standards are you looking to obtain?' : step === 1 ? 'What industry is your business in?' : 'How many people work in your business?',
+      qHint: isQ ? q.hint : step === 0 ? 'Choose as many as apply. Not sure yet is a valid answer.' : step === 1 ? 'In your own words — for example, structural steel fabrication, or civil earthworks.' : 'Approximate numbers are fine.',
+      opts, segs, canNext, nextDisabled: !canNext,
+      showBack: step > 0,
+      back: () => this.go(step - 1),
+      next: () => { if (step + 1 < total) this.go(step + 1); else { this.setState({ view: 'results' }); window.scrollTo(0, 0); } },
+      industry: st.industry, setIndustry: e => this.setState({ industry: e.target.value }),
+      employees: st.employees, setEmployees: e => this.setState({ employees: e.target.value }),
+      subbies: st.subbies, setSubbies: e => this.setState({ subbies: e.target.value }),
+      score: sc, bandName: this.band().name, bandText: this.band().text, bandRange: this.band().min + '–' + this.band().max + '%',
+      breakdown, submitted: st.submitted, notSubmitted: !st.submitted,
+      leadName: st.lead.name, leadEmail: st.lead.email, leadPhone: st.lead.phone, leadStatus: st.lead.status,
+      setLead: k => e => this.setState(p => ({ lead: { ...p.lead, [k]: e.target.value } })),
+      setName: e => this.setState(p => ({ lead: { ...p.lead, name: e.target.value } })),
+      setEmail: e => this.setState(p => ({ lead: { ...p.lead, email: e.target.value } })),
+      setPhone: e => this.setState(p => ({ lead: { ...p.lead, phone: e.target.value } })),
+      setStatus: e => this.setState(p => ({ lead: { ...p.lead, status: e.target.value } })),
+      submitDisabled: !(st.lead.name.trim().length > 0 && st.lead.email.trim().length > 3),
+      submitLead: () => { this.setState({ submitted: true }); },
+      restart: () => { this.setState({ view: 'landing', step: 0, answers: {}, submitted: false }); window.scrollTo(0, 0); }
+    };
+  }
+}
+</script>
+</body>
+</html>

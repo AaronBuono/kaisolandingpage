@@ -1,0 +1,11 @@
+:root{
+/* Kaiso geometry is flat and cut, not soft. Radii stay small; the chamfer is the brand move. */
+--radius-none:0px;--radius-xs:2px;--radius-sm:4px;--radius-md:6px;--radius-lg:10px;--radius-pill:999px;
+--chamfer-sm:6px;--chamfer-md:10px;--chamfer-lg:18px;--chamfer-xl:32px;
+--border-w-hairline:1px;--border-w-default:1.5px;--border-w-bold:2px;--border-w-heavy:3px;
+--focus-ring:0 0 0 2px var(--white),0 0 0 4px var(--ink-900);
+}
+/* Chamfered corners: the octagon motif carried from the Kobi mark and the KAISO wordmark. */
+.k-chamfer{clip-path:polygon(var(--chamfer-md) 0,100% 0,100% calc(100% - var(--chamfer-md)),calc(100% - var(--chamfer-md)) 100%,0 100%,0 var(--chamfer-md))}
+.k-chamfer-all{clip-path:polygon(var(--chamfer-md) 0,calc(100% - var(--chamfer-md)) 0,100% var(--chamfer-md),100% calc(100% - var(--chamfer-md)),calc(100% - var(--chamfer-md)) 100%,var(--chamfer-md) 100%,0 calc(100% - var(--chamfer-md)),0 var(--chamfer-md))}
+.k-octagon{clip-path:polygon(29.3% 0,70.7% 0,100% 29.3%,100% 70.7%,70.7% 100%,29.3% 100%,0 70.7%,0 29.3%)}
